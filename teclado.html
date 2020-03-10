@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teclas</title>
+    <style>
+        body{
+            background-image: linear-gradient(rgb(255, 182, 13),rgb(255, 230, 0), rgb(232, 188, 12));
+            background-attachment: fixed;
+            background-size: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            user-select: none;
+            text-align: center;
+        }
+
+        input{
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Página para capturar o código de cada tecla do teclado</h1>
+    <div class="" id="teclado"></div>
+    <input type="button" onclick="limpar()" value="limpar">
+
+    <script>
+        //Função para capturar as teclas do teclado
+        var pressionar = document.getElementById('teclado');
+
+        function teclaPressionada(evento){
+            evento = evento || window.event;
+            var tecla = evento.keyCode || evento.which;
+            pressionar.innerHTML += "( " + tecla + " , "
+            return String.fromCharCode(tecla); 
+        }
+
+        document.onkeypress = function(evento) {
+            var texto = teclaPressionada(evento);
+            pressionar.innerHTML += texto + " ), " 
+        };
+
+        function limpar(){
+            pressionar.innerHTML = ""
+        }
+    </script>
+</body>
+
+</html>

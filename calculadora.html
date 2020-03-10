@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Calculadora JS</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculadora" id="calculadora">
+            <div class="tela">
+                <div class="linha" id="conta"></div>
+                <div class="linha" id="valor"></div>
+            </div>
+            <div class="botao" id="limpar" onclick="limpar()"></div>
+            <div class="botao" id="apagar" onclick="apagar()"></div>
+            <div class="botao" id="sinal" onclick="sinal()"></div>
+            <div class="botao" id="dividir" onclick="operacao('/')"></div>
+            <div class="botao" id="" onclick="numero(7)">7</div>
+            <div class="botao" id="" onclick="numero(8)">8</div>
+            <div class="botao" id="" onclick="numero(9)">9</div>
+            <div class="botao" id="multiplicar" onclick="operacao('*')"></div>
+            <div class="botao" id="" onclick="numero(4)">4</div>
+            <div class="botao" id="" onclick="numero(5)">5</div>
+            <div class="botao" id="" onclick="numero(6)">6</div>
+            <div class="botao" id="menos" onclick="operacao('-')"></div>
+            <div class="botao" id="" onclick="numero(1)">1</div>
+            <div class="botao" id="" onclick="numero(2)">2</div>
+            <div class="botao" id="" onclick="numero(3)">3</div>
+            <div class="botao" id="mais" onclick="operacao('+')"></div>
+            <div class="botao" id="zero" onclick="numero(0)">0</div>
+            <div class="botao" id="ponto" onclick="ponto()"></div>
+            <div class="botao" id="igual" onclick="resultado()"></div>
+        </div>
+        <div class="" id="rodape">Luan Mantuani | 2019 | @l_mantuani</div>
+    </div>
+
+    <script src="js/calculadora.js"></script>
+</body>
+
+</html>
